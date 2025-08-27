@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lamumu Memory Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <h1>🐄 Lamumu Memory Game</h1>
+    <p>Flip the cards and match all the Lamumus!</p>
+
+    <div id="gameBoard"></div>
+    <p id="message"></p>
+    <p id="triesDisplay">Tries left: 10</p>
+    <!-- ⭐ ADDED -->
+    <button onclick="startGame()">🔄 Restart Game</button>
+    <button onclick="toggleMute()" id="muteBtn">🔊 Mute</button>
+
+    <!-- ⭐ ADDED overlays -->
+    <!-- WIN OVERLAY -->
+    <div id="winOverlay" class="hidden">
+  <h1>You Win! 🎉</h1>
+  <button id="restartBtnWin">Play Again</button>
+</div>
+    </div>
+
+    <!-- LOSE OVERLAY -->
+    <div id="loseOverlay" class="hidden">
+  <h1>Game Over 😢</h1>
+  <button id="restartBtn">Try Again</button>
+</div>
+
+    </div>
+
+    <!-- 🎵 Audio -->
+    <audio id="matchSound" src="sounds/good-6081.mp3"></audio>
+    <audio id="failSound" src="sounds/fail-234710.mp3"></audio>
+    <audio id="bgMusic" src="sounds/Backing.mp3" loop></audio>
+    <audio id="bubbleSound" src="sounds/bubble.mp3"></audio>
+    <!-- ⭐ ADDED -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
